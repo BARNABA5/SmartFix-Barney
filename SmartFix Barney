@@ -1,6 +1,6 @@
 # SmartFix-Barney
 
-SmartFix Barney is a mobile-friendly app that helps users troubleshoot phone issues, get simple fixing steps 
+SmartFix Barney is a mobile-friendly app that helps users troubleshoot phone issues and  get simple and smart fixing steps 
 
 ## Features
 - Diagnose phone issues
@@ -8,6 +8,7 @@ SmartFix Barney is a mobile-friendly app that helps users troubleshoot phone iss
 - Beautiful UI with HTML, CSS, and JavaScript
 - PHP backend for future database support
 - it is to have a restart reminder setting that reminds the phone user to restat once in a while for a better performance
+  it also has a bonus phone tips to make you be on track on how to use your phone like a pro!
 
 ## Try it Now!!
 Open `index.html` locally or host it with GitHub Pages.
