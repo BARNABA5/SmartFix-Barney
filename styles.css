@@ -1,0 +1,191 @@
+/* ==== GENERAL BODY STYLES ==== */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: url('1.jpg') repeat;
+  background-size: 300px; /* smaller background image */
+  animation: danceBackground 40s linear infinite;
+  position: relative;
+}
+
+/* Animated background motion */
+@keyframes danceBackground {
+  0% { background-position: 0 0; }
+  25% { background-position: 100px 100px; }
+  50% { background-position: -100px -100px; }
+  75% { background-position: -200px 200px; }
+  100% { background-position: 0 0; }
+}
+
+/* Subtle animated overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(45deg, rgba(131, 136, 177, 0.4) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.4) 75%, transparent 75%);
+  background-size: 50px 50px;
+  animation: moveMachine 6s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveMachine {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+/* ==== PHONE APP CONTAINER ==== */
+.phone-app {
+  max-width: 420px;
+  width: 95%;
+  margin: 30px auto;
+  height: 90vh;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 0 15px rgba(0, 123, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+
+/* ==== HEADER ==== */
+.phone-app header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #6c63ff;
+  text-shadow: 1px 1px 3px black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.phone-app header h2 {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ==== SELECT DROPDOWN ==== */
+label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid #6c63ff;
+  background: #f0f4ff;
+  color: #222;
+  margin-bottom: 20px;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23777" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+}
+
+/* ==== SCROLLABLE BUTTON GROUP ==== */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 6px;
+}
+
+/* Custom Scrollbar */
+.button-group::-webkit-scrollbar {
+  width: 6px;
+}
+.button-group::-webkit-scrollbar-thumb {
+  background-color: #6c63ff;
+  border-radius: 3px;
+}
+
+/* ==== BUTTON STYLES ==== */
+.button-group button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 14px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover {
+  background-color: #6c63ff;
+  transform: scale(1.03);
+}
+
+/* ==== MAIN SECTION OUTPUT AREAS ==== */
+.phone-app main {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+/* Output areas */
+#output, #stepFix, #tips, #restart, #scanner {
+  background: rgba(236, 234, 255, 0.9);
+  border-radius: 15px;
+  padding: 15px 20px;
+  box-shadow: inset 0 0 8px rgba(108, 99, 255, 0.2);
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+/* Tips animation */
+#tips {
+  animation: fadeInUp 0.7s ease;
+  background-color: #eef;
+}
+
+/* ==== SETTINGS PANEL ==== */
+#settingsPanel {
+  background: #f8f8ff;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+#settingsPanel label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==== HISTORY ==== */
+#history {
+  max-height: 120px;
+  overflow-y: auto;
+  padding-left: 20px;
+  color: #444;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+#history::-webkit-scrollbar {
+  width: 6px;
+}
+#history::-webkit-scrollbar-thumb {
+  background-color: #6c63ff;
+  border-radius: 3px;
+}
