@@ -1,13 +1,21 @@
 /* ==== GENERAL BODY STYLES ==== */
+/* ==== GENERAL BODY STYLES ==== */
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: 'Poppins', sans-serif;
   background: url('1.jpg') repeat;
-  background-size: 300px; /* smaller background image */
-  animation: danceBackground 40s linear infinite;
+  background-size: 300px 300px;
+  animation: backgroundDrift 60s linear infinite;
   position: relative;
+  overflow-x: hidden;
+}
+
+/* 🌌 Smooth animated background movement */
+@keyframes backgroundDrift {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
 }
 
 /* Animated background motion */
